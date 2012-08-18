@@ -32,7 +32,7 @@ public class FileAttachmentActivity extends DroidGap {
         }
     }
 
-    // openFileChooser is an overridable method in WebChromeClient which wasn't
+    // openFileChooser is an overridable method in WebChromeClient which isn't
     // included in the SDK's Android stub code
     public class FileAttachmentChromeClient extends CordovaChromeClient {
 
