@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>File Attachment & Upload Example</title>
+    <link rel="stylesheet" href="css/jquery.mobile-1.1.1.min.css"/>
+    <script type="text/javascript" charset="utf-8" src="js/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/jquery.mobile-1.1.1.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/cordova-2.0.0.js"></script>
+
+    <script>
+        $.mobile.allowCrossDomainPages = true
+    </script>
+</head>
+<body>
+<div data-role="page">
+    <div data-role="header">
+        <h1>Attach File</h1>
+    </div>
+    <div data-role="content">
+        <form id="task-form" action="http://PutYourServerURL">
+
+            <div data-role="fieldcontain">
+                <label for="data">Put some text:</label>
+                <input name="data" type="text" id="data"/>
+            </div>
+
+            <div data-role="fieldcontain">
+                <label for="attachment">Attachment:</label>
+                <input type="file" name="attachment" id="attachment"/>
+            </div>
+
+            <input type="submit" value="Submit"/>
+        </form>
+    </div>
+    <script>
+        $('#task-form').submit(function () {
+
+            formData = new FormData($(this)[0]);
+
+            $.ajax({
+                type:'POST',
+                url:$('#task-form').attr('action'),
+                data:formData,
+                contentType: false,
+                processData: false,
+                error:function (jqXHR, textStatus, errorThrown) {
+                    alert('Failed to upload file')
+                },
+                success:function () {
+                    alert('File uploaded')
+                }
+            })
+
+            return false
+        });
+    </script>
+</div>
+</body>
+</html>
