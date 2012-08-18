@@ -17,7 +17,7 @@
         <h1>Attach File</h1>
     </div>
     <div data-role="content">
-        <form id="task-form" action="http://PutYourServerURL">
+        <form id="file-attachment-form" action="http://PutYourServerURL">
 
             <div data-role="fieldcontain">
                 <label for="data">Put some text:</label>
@@ -33,13 +33,13 @@
         </form>
     </div>
     <script>
-        $('#task-form').submit(function () {
+        $('#file-attachment-form').submit(function () {
 
             formData = new FormData($(this)[0]);
 
             $.ajax({
                 type:'POST',
-                url:$('#task-form').attr('action'),
+                url:$('#file-attachment-form').attr('action'),
                 data:formData,
                 contentType: false,
                 processData: false,
