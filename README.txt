@@ -1,4 +1,4 @@
-To run example:
+To run the example:
 
 1. Replace "http://PutYourServerURL" in index.html with your server URL
 
