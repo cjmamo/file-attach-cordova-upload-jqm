@@ -7,10 +7,6 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>apk</packaging>
 
-    <properties>
-        <android.sdk.path>/Users/claudemamo/opt/android-sdk-macosx</android.sdk.path>
-    </properties>
-
     <dependencies>
         <dependency>
             <groupId>com.google.android</groupId>
