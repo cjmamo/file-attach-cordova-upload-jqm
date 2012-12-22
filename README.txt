@@ -1,6 +1,6 @@
 To run the example:
 
-1. Replace "http://PutYourServerURL" in index.html with your server URL
+1. Replace "http://PutYourServerURL" in assets/www/index.html with your server URL
 
 2. Install Maven, open your console and enter the following command in the project root directory:
 
